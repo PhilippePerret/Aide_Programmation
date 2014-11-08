@@ -1,0 +1,5 @@
+# Faire simplement un fichier bash (.sh) contenant :
+
+#!/usr/bin/env bash
+
+python -mwebbrowser "http://<<<URI>>>"

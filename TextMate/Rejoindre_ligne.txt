@@ -1,0 +1,9 @@
+Rejoint une ligne dans le document courant :
+
+<a href='txmt://open/?line=#{num_line}&column={num_colonne}'>Voir</a>
+
+Dans un autre document :
+
+<a href='txmt://open/?url=file://{path/to_file}&line=#{num_line}&column={num_colonne}'>Voir</a>
+
+Note : La première colonne est 1

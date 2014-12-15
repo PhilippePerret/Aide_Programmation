@@ -1,8 +1,8 @@
-Rejoint une ligne dans le document courant :
+Rejoint une ligne dans le document courant (donc par exemple quand on est sur une page produite pas TextMate dans Textmate) :
 
 <a href='txmt://open/?line=#{num_line}&column={num_colonne}'>Voir</a>
 
-Dans un autre document :
+Dans un autre document (donc par exemple quand on est sur une page Firefox ou autre navigateur) :
 
 <a href='txmt://open/?url=file://{path/to_file}&line=#{num_line}&column={num_colonne}'>Voir</a>
 

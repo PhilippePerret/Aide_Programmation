@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Color Bash Prompt - ArchWiki</title>
+<meta name="generator" content="MediaWiki 1.24.2" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="ArchWiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.archlinux.org/api.php?action=rsd" />
+<link rel="alternate" hreflang="x-default" href="/index.php/Color_Bash_Prompt" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+<link rel="alternate" type="application/atom+xml" title="ArchWiki Atom feed" href="/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="https://wiki.archlinux.org/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.skinning.content.externallinks%7Cmediawiki.skinning.interface%7Cmediawiki.ui.button%7Cskins.archlinux.styles&amp;only=styles&amp;skin=archlinux&amp;*" />
+<!--[if IE 6]><link rel="stylesheet" href="/skins/ArchLinux/IE60Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/skins/ArchLinux/IE70Fixes.css?303" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="https://wiki.archlinux.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=archlinux&amp;*" />
+<style></style>
+<script src="https://wiki.archlinux.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=archlinux&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Color_Bash_Prompt","wgTitle":"Color Bash Prompt","wgCurRevisionId":372842,"wgRevisionId":372842,"wgArticleId":1076,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Eye candy","Command shells"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Color_Bash_Prompt","wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":1,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rows":25,"showhiddencats":0,"shownumberswatching":1,"showtoolbar":1,"skin":"archlinux","stubthreshold":0,"thumbsize":5,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":1,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"watchrollback":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\"});},{},{});
+/* cache key: archwiki:resourceloader:filter:minify-js:7:d3ab0b2ef391617e2b817fcb3be60237 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Color_Bash_Prompt skin-archlinux action-view">
+
+		<div id="archnavbar"><!-- Arch Linux global navigation bar -->
+			<div id="archnavbarlogo">
+				<p><a id="logo" href="http://www.archlinux.org/"></a></p>
+			</div>
+			<div id="archnavbarmenu">
+				<ul id="archnavbarlist">
+					<li id="anb-home"><a href="http://www.archlinux.org/">Home</a></li><li id="anb-packages"><a href="http://www.archlinux.org/packages/">Packages</a></li><li id="anb-forums"><a href="https://bbs.archlinux.org/">Forums</a></li><li id="anb-wiki" class="anb-selected"><a href="https://wiki.archlinux.org/">Wiki</a></li><li id="anb-bugs"><a href="https://bugs.archlinux.org/">Bugs</a></li><li id="anb-aur"><a href="https://aur.archlinux.org/">AUR</a></li><li id="anb-download"><a href="http://www.archlinux.org/download/">Download</a></li>				</ul>
+			</div>
+		</div><!-- #archnavbar -->
+
+		<div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Color Bash Prompt</span></h1>
+
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From ArchWiki</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div style="float:right; clear:right; width:25%; margin: 0 0 0.5em 0.5em;"><p style="background:#333; color:white; padding:0.2em; border-bottom:5px #08c solid; margin:0; text-align:center; font-weight:bold;">Related articles</p><ul style="list-style-type:none; margin:0; padding:0.3em;">
+<li style="padding:0.4em 0; line-height:1;"><a href="/index.php/Bash" title="Bash">Bash</a></li>
+<li style="padding:0.4em 0; line-height:1;"><a href="/index.php/Environment_variables" title="Environment variables">Environment variables</a></li>
+</ul></div>
+<div class="noprint archwiki-template-message">
+<p><a href="/index.php/File:Tango-emblem-important.png" class="image"><img alt="Tango-emblem-important.png" src="/images/c/c8/Tango-emblem-important.png" width="48" height="48" /></a></p>
+<p><a href="/index.php/File:Tango-emblem-important.png" class="image"><img alt="Tango-emblem-important.png" src="/images/c/c8/Tango-emblem-important.png" width="48" height="48" /></a></p>
+<div>
+<p><b>The factual accuracy of this article or section is disputed.</b></p>
+<p><b>Reason:</b> Raw escapes vs. <code>tput</code>, see <a href="/index.php/Bash#Prompt_customization" title="Bash">Bash#Prompt_customization</a> (Discuss in <a rel="nofollow" class="external text" href="https://wiki.archlinux.org/index.php/Talk:Color_Bash_Prompt">Talk:Color Bash Prompt#</a>)</p>
+</div>
+</div>
+<p>There are a variety of possibilities for <a href="/index.php/Bash" title="Bash">Bash</a>'s prompt (PS1), and customizing it can help your productivity at the command line. Adding additional information and colors can make it the prompt to stand out.
+</p><p>This guide shows how to <i>customize the personal prompt of a regular user</i>.
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Applying_changes"><span class="tocnumber">1</span> <span class="toctext">Applying changes</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Basic_prompts"><span class="tocnumber">2</span> <span class="toctext">Basic prompts</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Regular_user"><span class="tocnumber">2.1</span> <span class="toctext">Regular user</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Root"><span class="tocnumber">2.2</span> <span class="toctext">Root</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Slightly_fancier_prompts"><span class="tocnumber">3</span> <span class="toctext">Slightly fancier prompts</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Regular_user_2"><span class="tocnumber">3.1</span> <span class="toctext">Regular user</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Root_2"><span class="tocnumber">3.2</span> <span class="toctext">Root</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Advanced_prompts"><span class="tocnumber">4</span> <span class="toctext">Advanced prompts</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Load.2FMem_Status_for_256colors"><span class="tocnumber">4.1</span> <span class="toctext">Load/Mem Status for 256colors</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#List_of_colors_for_prompt_and_Bash"><span class="tocnumber">4.2</span> <span class="toctext">List of colors for prompt and Bash</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Prompt_escapes"><span class="tocnumber">4.3</span> <span class="toctext">Prompt escapes</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Positioning_the_cursor"><span class="tocnumber">4.4</span> <span class="toctext">Positioning the cursor</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Return_value_visualisation"><span class="tocnumber">4.5</span> <span class="toctext">Return value visualisation</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#Tips_and_tricks"><span class="tocnumber">5</span> <span class="toctext">Tips and tricks</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#Different_colors_for_text_entry_and_console_output"><span class="tocnumber">5.1</span> <span class="toctext">Different colors for text entry and console output</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Random_quotations_at_logon"><span class="tocnumber">5.2</span> <span class="toctext">Random quotations at logon</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Colorized_Arch_latest_news_at_logon"><span class="tocnumber">5.3</span> <span class="toctext">Colorized Arch latest news at logon</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Colors_overview"><span class="tocnumber">5.4</span> <span class="toctext">Colors overview</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Colorized_git_prompt"><span class="tocnumber">5.5</span> <span class="toctext">Colorized git prompt</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-20"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Applying_changes">Applying changes</span></h2>
+<p>To apply changes from this article to your <code>.bashrc</code> (without ending <a rel="nofollow" class="external text" href="http://mywiki.wooledge.org/SubShell">subshells</a>), do:
+</p>
+<pre>$ source ~/.bashrc
+</pre>
+<h2><span class="mw-headline" id="Basic_prompts">Basic prompts</span></h2>
+<p>The following settings are useful for distinguishing the root prompt from non-root users.
+</p>
+<h3><span class="mw-headline" id="Regular_user">Regular user</span></h3>
+<p>A green prompt for <i>regular users</i>:
+</p>
+<div style="font-family: monospace; white-space: pre; padding: 1em; border: 3px solid #bcd; background-color: black; color: #aaa;"><span style="color: #0f0">[chiri@zetsubou ~]$</span> <span style="text-decoration: blink;">_</span></div>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.bashrc</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">
+#PS1='[\u@\h \W]\$ '  # Default
+PS1='\[\e[1;32m\][\u@\h \W]\$\[\e[0m\] '</pre>
+<h3><span class="mw-headline" id="Root">Root</span></h3>
+<p>A red prompt for <i>root</i> (copy from <code>/etc/skel/</code>, if not already):
+</p>
+<div style="font-family: monospace; white-space: pre; padding: 1em; border: 3px solid #bcd; background-color: black; color: #aaa;"><span style="color: #f00">[root@zetsubou ~]#</span> <span style="text-decoration: blink;">_</span></div>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">/root/.bashrc</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">
+#PS1='[\u@\h \W]\$ '  # Default
+PS1='\[\e[1;31m\][\u@\h \W]\$\[\e[0m\] '</pre>
+<h2><span class="mw-headline" id="Slightly_fancier_prompts">Slightly fancier prompts</span></h2>
+<h3><span class="mw-headline" id="Regular_user_2">Regular user</span></h3>
+<p>A green/blue prompt for <i>regular users</i>:
+</p>
+<div style="font-family: monospace; white-space: pre; padding: 1em; border: 3px solid #bcd; background-color: black; color: #aaa;"><span style="color: #0a0">chiri</span> <span style="color: #00f">~/docs</span> <span style="color: #0f0">$</span> echo "sample output text"<br />sample output text<br /><span style="color: #0a0">chiri</span> <span style="color: #00f">~/docs</span> <span style="color: #0f0">$</span> <span style="text-decoration: blink;">_</span></div>
+<pre>PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[1;37m\]'</pre>
+<p>This will give a very pleasing, colorful prompt and theme for the console with bright white text.
+</p><p>The string above contains color-set escape sequences (start coloring: <code>\[\e[<i>color</i>\]</code>, end coloring: <code>\[\e[m\]</code>) and information placeholders:
+</p>
+<ul><li> <b>\u</b> - Username. The original prompt also has <b>\h</b>, which prints the host name.</li>
+<li> <b>\w</b> - Current absolute path. Use <b>\W</b> for current relative path.</li>
+<li> <b>\$</b> - The prompt character (eg. <code>#</code> for root, <code>$</code> for regular users). </li>
+<li> <b>\[</b> and <b>\]</b> - These tags should be placed around color codes so bash knows how to properly place the cursor.</li></ul>
+<p>For more special character references, see gnu.org's <a rel="nofollow" class="external text" href="http://www.gnu.org/software/bash/manual/html_node/Printing-a-Prompt.html">controlling the bash prompt</a> web page.
+</p><p>The last color-set sequence, <code>\[\e[1;37m\]</code>, is not closed, so the remaining text (everything typed into the terminal, program output and so on) will be in that (bright white) color. It may be desirable to change this color, or to delete the last escape sequence in order to leave the actual output in unaltered color.
+</p>
+<h3><span class="mw-headline" id="Root_2">Root</span></h3>
+<p>A red/blue prompt for <i>root</i>:
+</p>
+<div style="font-family: monospace; white-space: pre; padding: 1em; border: 3px solid #bcd; background-color: black; color: #aaa;"><span style="color: #a00">root</span> <span style="color: #00f">~/docs</span> <span style="color: #a00">#</span> <span style="color: #0a0">echo "sample output text"<br />sample output text<br /></span><span style="color: #a00">root</span> <span style="color: #00f">~/docs</span> <span style="color: #a00">#</span> <span style="color: #0a0"><span style="text-decoration: blink;">_</span></span></div>
+<pre>PS1='\[\e[0;31m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[0;31m\]\$ \[\e[m\]\[\e[0;32m\]'</pre>
+<p>This will give you a red designation and green console text.
+</p>
+<h2><span class="mw-headline" id="Advanced_prompts">Advanced prompts</span></h2>
+<h3><span class="mw-headline" id="Load.2FMem_Status_for_256colors">Load/Mem Status for 256colors</span></h3>
+<p>This is not even pushing the limits. Other than using <code>sed</code> to parse the memory and load average (using the <code>-u</code> option for non-buffering), and the builtin <i>history</i> to save your history to your <code>HISTFILE</code> after every command, which you may find incredibly useful when dealing with crashing shells or subshells, this is essentially just making BASH print variables it already knows, making this extremely fast compared to prompts with non-builtin commands.
+</p><p>This prompt is from AskApache.com's <a rel="nofollow" class="external text" href="http://www.askapache.com/linux-unix/bash-power-prompt.html">BASH Power Prompt article</a>, which goes into greater detail.  It is especially helpful for those wanting to understand 256 color terminals, ncurses, termcap, and terminfo.
+</p><p>This is for <b>256 color terminals</b>, which is where the <code>\033[38;5;22m</code> terminal escapes come from.  
+</p>
+<pre><span style="color:#0b0">802</span><span style="color:#005f00">/1024MB</span>      <span style="color:#5f00af">1.28 1.20 1.13 3/94 18563</span>
+<span style="color:#555">[5416:17880 0:70]</span> <span style="color:0bb">05:35:50 Wed Apr 21</span> <span style="color:#555">[</span><span style="color:#2b47ff">srot@host.sqpt.net</span><span style="color:#555">:</span><span style="color:#bbb">/dev/pts/0</span> <span style="color:#00bb00">+1</span><span style="color:#555">]</span> <span style="color:#000">~<br />
+(1:70)$ <span style="text-decoration: blink;">_</span></span></pre>
+<pre>PROMPT_COMMAND='history -a;echo -en &quot;\033[m\033[38;5;2m&quot;$(( $(sed -nu &quot;s/MemFree:[\t ]\+\([0-9]\+\) kB/\1/p&quot; /proc/meminfo)/1024))&quot;\033[38;5;22m/&quot;$(($(sed -nu &quot;s/MemTotal:[\t ]\+\([0-9]\+\) kB/\1/Ip&quot; /proc/meminfo)/1024 ))MB&quot;\t\033[m\033[38;5;55m$(&lt; /proc/loadavg)\033[m&quot;'
+PS1='\[\e[m\n\e[1;30m\][$$:$PPID \j:\!\[\e[1;30m\]]\[\e[0;36m\] \T \d \[\e[1;30m\][\[\e[1;34m\]\u@\H\[\e[1;30m\]:\[\e[0;37m\]${SSH_TTY} \[\e[0;32m\]+${SHLVL}\[\e[1;30m\]] \[\e[1;37m\]\w\[\e[0;37m\] \n($SHLVL:\!)\$ '</pre>
+<h3><span class="mw-headline" id="List_of_colors_for_prompt_and_Bash">List of colors for prompt and Bash</span></h3>
+<p>Add this to your Bash file(s) to define colors for prompt and commands:
+</p>
+<pre>txtblk='\e[0;30m' # Black - Regular
+txtred='\e[0;31m' # Red
+txtgrn='\e[0;32m' # Green
+txtylw='\e[0;33m' # Yellow
+txtblu='\e[0;34m' # Blue
+txtpur='\e[0;35m' # Purple
+txtcyn='\e[0;36m' # Cyan
+txtwht='\e[0;37m' # White
+bldblk='\e[1;30m' # Black - Bold
+bldred='\e[1;31m' # Red
+bldgrn='\e[1;32m' # Green
+bldylw='\e[1;33m' # Yellow
+bldblu='\e[1;34m' # Blue
+bldpur='\e[1;35m' # Purple
+bldcyn='\e[1;36m' # Cyan
+bldwht='\e[1;37m' # White
+unkblk='\e[4;30m' # Black - Underline
+undred='\e[4;31m' # Red
+undgrn='\e[4;32m' # Green
+undylw='\e[4;33m' # Yellow
+undblu='\e[4;34m' # Blue
+undpur='\e[4;35m' # Purple
+undcyn='\e[4;36m' # Cyan
+undwht='\e[4;37m' # White
+bakblk='\e[40m'   # Black - Background
+bakred='\e[41m'   # Red
+bakgrn='\e[42m'   # Green
+bakylw='\e[43m'   # Yellow
+bakblu='\e[44m'   # Blue
+bakpur='\e[45m'   # Purple
+bakcyn='\e[46m'   # Cyan
+bakwht='\e[47m'   # White
+txtrst='\e[0m'    # Text Reset</pre>
+<p>Or if you prefer color names you will know how to spell without a special decoder ring and want high intensity colors:
+</p>
+<pre># Reset
+Color_Off='\e[0m'       # Text Reset
+
+# Regular Colors
+Black='\e[0;30m'        # Black
+Red='\e[0;31m'          # Red
+Green='\e[0;32m'        # Green
+Yellow='\e[0;33m'       # Yellow
+Blue='\e[0;34m'         # Blue
+Purple='\e[0;35m'       # Purple
+Cyan='\e[0;36m'         # Cyan
+White='\e[0;37m'        # White
+
+# Bold
+BBlack='\e[1;30m'       # Black
+BRed='\e[1;31m'         # Red
+BGreen='\e[1;32m'       # Green
+BYellow='\e[1;33m'      # Yellow
+BBlue='\e[1;34m'        # Blue
+BPurple='\e[1;35m'      # Purple
+BCyan='\e[1;36m'        # Cyan
+BWhite='\e[1;37m'       # White
+
+# Underline
+UBlack='\e[4;30m'       # Black
+URed='\e[4;31m'         # Red
+UGreen='\e[4;32m'       # Green
+UYellow='\e[4;33m'      # Yellow
+UBlue='\e[4;34m'        # Blue
+UPurple='\e[4;35m'      # Purple
+UCyan='\e[4;36m'        # Cyan
+UWhite='\e[4;37m'       # White
+
+# Background
+On_Black='\e[40m'       # Black
+On_Red='\e[41m'         # Red
+On_Green='\e[42m'       # Green
+On_Yellow='\e[43m'      # Yellow
+On_Blue='\e[44m'        # Blue
+On_Purple='\e[45m'      # Purple
+On_Cyan='\e[46m'        # Cyan
+On_White='\e[47m'       # White
+
+# High Intensity
+IBlack='\e[0;90m'       # Black
+IRed='\e[0;91m'         # Red
+IGreen='\e[0;92m'       # Green
+IYellow='\e[0;93m'      # Yellow
+IBlue='\e[0;94m'        # Blue
+IPurple='\e[0;95m'      # Purple
+ICyan='\e[0;96m'        # Cyan
+IWhite='\e[0;97m'       # White
+
+# Bold High Intensity
+BIBlack='\e[1;90m'      # Black
+BIRed='\e[1;91m'        # Red
+BIGreen='\e[1;92m'      # Green
+BIYellow='\e[1;93m'     # Yellow
+BIBlue='\e[1;94m'       # Blue
+BIPurple='\e[1;95m'     # Purple
+BICyan='\e[1;96m'       # Cyan
+BIWhite='\e[1;97m'      # White
+
+# High Intensity backgrounds
+On_IBlack='\e[0;100m'   # Black
+On_IRed='\e[0;101m'     # Red
+On_IGreen='\e[0;102m'   # Green
+On_IYellow='\e[0;103m'  # Yellow
+On_IBlue='\e[0;104m'    # Blue
+On_IPurple='\e[0;105m'  # Purple
+On_ICyan='\e[0;106m'    # Cyan
+On_IWhite='\e[0;107m'   # White
+</pre>
+<p>To use in commands from your shell environment:
+</p>
+<div style="font-family: monospace; padding: 1em; border: 3px solid #bcd; background-color: black; color: #fff;">$ echo -e "${txtblu}test"<br /><span style="color: blue;">test</span><br />$ echo -e "${bldblu}test"<br /><span style="color: lightblue;"><strong>test</strong></span><br />$ echo -e "${undblu}test"<br /><span style="color: lightblue;"><strong><span style="text-decoration: underline;">test</span></strong></span><br />$ echo -e "${bakblu}test"<br /><span style="color: white; background-color: lightblue;"><strong>test</strong></span><br />$ <span style="text-decoration: blink;">_</span></div>
+<pre>PS1=&quot;\[$txtblu\]foo\[$txtred\] bar\[$txtrst\] baz : &quot;</pre>
+<p>Double quotes enable <code>$color</code> variable expansion and the <code>\[ \]</code> escapes around them make them not count as character positions and the cursor position is not wrong.
+</p>
+<div style="padding: 5px; margin: 0.50em 0; background-color: #DDDDFF; border: thin solid #BBBBDD; overflow: hidden;"><strong> Note: </strong>If experiencing premature line wrapping when entering commands, then missing escapes (<code>\[ \]</code>) is most likely the reason.</div>
+<h3><span class="mw-headline" id="Prompt_escapes">Prompt escapes</span></h3>
+<p>The various Bash prompt escapes listed in the manpage:
+</p>
+<pre>Bash allows these prompt strings to be customized by inserting a
+number of <i>backslash-escaped special characters</i> that are
+decoded as follows:
+
+	\a		an ASCII bell character (07)
+	\d		the date in "Weekday Month Date" format (e.g., "Tue May 26")
+	\D{format}	the format is passed to strftime(3) and the result
+			  is inserted into the prompt string an empty format
+			  results in a locale-specific time representation.
+			  The braces are required
+	\e		an ASCII escape character (033)
+	\h		the hostname up to the first `.'
+	\H		the hostname
+	\j		the number of jobs currently managed by the shell
+	\l		the basename of the shell's terminal device name
+	\n		newline
+	\r		carriage return
+	\s		the name of the shell, the basename of $0 (the portion following
+			  the final slash)
+	\t		the current time in 24-hour HH:MM:SS format
+	\T		the current time in 12-hour HH:MM:SS format
+	\@		the current time in 12-hour am/pm format
+	\A		the current time in 24-hour HH:MM format
+	\u		the username of the current user
+	\v		the version of bash (e.g., 2.00)
+	\V		the release of bash, version + patch level (e.g., 2.00.0)
+	\w		the current working directory, with $HOME abbreviated with a tilde
+	\W		the basename of the current working directory, with $HOME
+			 abbreviated with a tilde
+	\!		the history number of this command
+	\#		the command number of this command
+	\$		if the effective UID is 0, a #, otherwise a $
+	\nnn		the character corresponding to the octal number nnn
+	\\		a backslash
+	\[		begin a sequence of non-printing characters, which could be used
+			  to embed a terminal control sequence into the prompt
+	\]		end a sequence of non-printing characters
+
+	The command number and the history number are usually different:
+	the history number of a command is its position in the history
+	list, which may include commands restored from the history file
+	(see HISTORY below), while the command number is the position in
+	the sequence of commands executed during the current shell session.
+	After the string is decoded, it is expanded via parameter
+	expansion, command substitution, arithmetic expansion, and quote
+	removal, subject to the value of the promptvars shell option (see
+	the description of the shopt command under SHELL BUILTIN COMMANDS
+	below).</pre>
+<h3><span class="mw-headline" id="Positioning_the_cursor">Positioning the cursor</span></h3>
+<p>The following sequence sets the cursor position:
+</p>
+<pre>\[\033[&lt;row&gt;;&lt;column&gt;f\]</pre>
+<p>The current cursor position can be saved using:
+</p>
+<pre>\[\033[s\]</pre>
+<p>To restore a position, use the following sequence: 
+</p>
+<pre>\[\033[u\]</pre>
+<p><br />
+The following example uses these sequences to display the time in the upper right corner:
+</p>
+<pre>PS1=&quot;&gt;\[\033[s\]\[\033[1;\$((COLUMNS-5))f\]\$(date +%H:%M)\[\033[u\]&quot;</pre>
+<p>The environment variable <code>COLUMNS</code> contains the number of columns of the terminal. The above example substracts <i>5</i> from its value in order to justify the five-character wide output of <code>date</code> at the right border.
+</p>
+<h3><span class="mw-headline" id="Return_value_visualisation">Return value visualisation</span></h3>
+<p>Use the following prompt to see the return value of last command:
+</p>
+<div style="font-family: monospace; padding: 1em; border: 3px solid #bcd; background-color: black; color: #fff;">0 <span style="color: green;">;)</span>&#160;: true<br />0 <span style="color: green;">;)</span>&#160;: false<br />1 <span style="color: red;">;(</span>&#160;:</div>
+<pre>#return value visualisation
+PS1=&quot;\$? \$(if [[ \$? == 0 ]]; then echo \&quot;\[\033[0;32m\];)\&quot;; else echo \&quot;\[\033[0;31m\];(\&quot;; fi)\[\033[00m\] : &quot;</pre>
+<p><i>Zero</i> is a green smiley and <i>non-zero</i> a red one. So your prompt will smile if the last operation was successful.
+</p><p>But you will probably want to include the username and hostname as well, like this:
+</p>
+<div style="font-family: monospace; padding: 1em; border: 3px solid #bcd; background-color: black; color: #fff;"><span style="font-weight: bold;">0</span> <span style="color: #0a0; font-weight: bold;">;) andy@alba</span> <span style="color: #55f; font-weight: bold;">~ $</span> true<br /><span style="font-weight: bold;">0</span> <span style="color: #0a0; font-weight: bold;">;) andy@alba</span> <span style="color: #55f; font-weight: bold;">~ $</span> false<br /><span style="font-weight: bold;">1</span> <span style="color: #a00; font-weight: bold;">;(</span> <span style="color: #0a0; font-weight: bold;">andy@alba</span> <span style="color: #55f; font-weight: bold;">~ $</span> <span style="text-decoration: blink;">_</span></div>
+<pre>#return value visualisation
+PS1=&quot;\[\033[01;37m\]\$? \$(if [[ \$? == 0 ]]; then echo \&quot;\[\033[01;32m\];)\&quot;; else echo \&quot;\[\033[01;31m\];(\&quot;; fi) $(if [[ ${EUID} == 0 ]]; then echo '\[\033[01;31m\]\h'; else echo '\[\033[01;32m\]\u@\h'; fi)\[\033[01;34m\] \w \$\[\033[00m\] &quot;</pre>
+<p>Or, if you want, you can build your prompt using the <span style="color: #0a0; font-weight: bold;">&#10003;</span> unicode symbol for a <i>zero</i> status and the <span style="color: #a00; font-weight: bold;">&#10007;</span> unicode symbol for a <i>nonzero</i> status:
+</p>
+<div style="font-family: monospace; padding: 1em; border: 3px solid #bcd; background-color: black; color: #fff;"><span style="font-weight: bold;">0</span> <span style="color: #0a0; font-weight: bold;">&#10003; andy@alba</span> <span style="color: #55f; font-weight: bold;">~ $</span> true<br /><span style="font-weight: bold;">0</span> <span style="color: #0a0; font-weight: bold;">&#10003; andy@alba</span> <span style="color: #55f; font-weight: bold;">~ $</span> false<br /><span style="font-weight: bold;">1</span> <span style="color: #a00; font-weight: bold;">&#10007;</span> <span style="color: #0a0; font-weight: bold;">andy@alba</span> <span style="color: #55f; font-weight: bold;">~ $</span> I\ will\ try\ to\ type\ a\ wrong\ command...<br />bash: I will try to type a wrong command...: command not found<br /><span style="font-weight: bold;">127</span> <span style="color: #a00; font-weight: bold;">&#10007;</span> <span style="color: #0a0; font-weight: bold;">andy@alba</span> <span style="color: #55f; font-weight: bold;">~ $</span> <span style="text-decoration: blink;">_</span></div>
+<pre>#return value visualisation
+PS1=&quot;\[\033[01;37m\]\$? \$(if [[ \$? == 0 ]]; then echo \&quot;\[\033[01;32m\]\342\234\223\&quot;; else echo \&quot;\[\033[01;31m\]\342\234\227\&quot;; fi) $(if [[ ${EUID} == 0 ]]; then echo '\[\033[01;31m\]\h'; else echo '\[\033[01;32m\]\u@\h'; fi)\[\033[01;34m\] \w \$\[\033[00m\] &quot;</pre>
+<p>Alternatively, this can be made more <a rel="nofollow" class="external text" href="http://stackoverflow.com/a/22362727/1821548">readable</a> with <code>PROMPT_COMMAND</code>:
+</p>
+<pre>set_prompt () {
+    Last_Command=$? # Must come first!
+    Blue='\[\e[01;34m\]'
+    White='\[\e[01;37m\]'
+    Red='\[\e[01;31m\]'
+    Green='\[\e[01;32m\]'
+    Reset='\[\e[00m\]'
+    FancyX='\342\234\227'
+    Checkmark='\342\234\223'
+
+    # Add a bright white exit status for the last command
+    PS1=&quot;$White\$? &quot;
+    # If it was successful, print a green check mark. Otherwise, print
+    # a red X.
+    if [[ $Last_Command == 0 ]]; then
+        PS1+=&quot;$Green$Checkmark &quot;
+    else
+        PS1+=&quot;$Red$FancyX &quot;
+    fi
+    # If root, just print the host in red. Otherwise, print the current user
+    # and host in green.
+    if [[ $EUID == 0 ]]; then
+        PS1+=&quot;$Red\\h &quot;
+    else
+        PS1+=&quot;$Green\\u@\\h &quot;
+    fi
+    # Print the working directory and prompt marker in blue, and reset
+    # the text color to the default.
+    PS1+=&quot;$Blue\\w \\\$$Reset &quot;
+}
+PROMPT_COMMAND='set_prompt'</pre>
+<p>Here is an alternative that only includes the error status, if <i>non-zero</i>:
+</p>
+<pre>
+PROMPT_COMMAND='es=$?; [[ $es -eq 0 ]] &amp;&amp; unset error || error=$(echo -e &quot;\e[1;41m $es \e[40m&quot;)'
+PS1=&quot;${error} ${PS1}&quot;</pre>
+<h2><span class="mw-headline" id="Tips_and_tricks">Tips and tricks</span></h2>
+<h3><span class="mw-headline" id="Different_colors_for_text_entry_and_console_output">Different colors for text entry and console output</span></h3>
+<p>If you do not reset the text color at the end of your prompt, both the text you enter and the console text will simply stay in that color. If you want to edit text in a special color but still use the default color for command output, you will need to reset the color after you press <code>Enter</code>, but still before any commands get run. You can do this by installing a DEBUG trap, like this:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.bashrc</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">
+trap 'echo -ne &quot;\e[0m&quot;' DEBUG</pre>
+<h3><span class="mw-headline" id="Random_quotations_at_logon">Random quotations at logon</span></h3>
+<p>For a brown <a href="/index.php/Fortune" title="Fortune">Fortune</a> prompt, add:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.bashrc</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">
+[[ &quot;$PS1&quot; ]] &amp;&amp; echo -e &quot;\e[00;33m$(/usr/bin/fortune)\e[00m&quot;
+</pre>
+<h3><span class="mw-headline" id="Colorized_Arch_latest_news_at_logon">Colorized Arch latest news at logon</span></h3>
+<p>To read 10 latest news items from the <a rel="nofollow" class="external text" href="https://www.archlinux.org/news/">Arch official website</a>, user <a rel="nofollow" class="external text" href="https://aur.archlinux.org/account.php?Action=AccountInfo&amp;ID=33208">grufo</a> has <a rel="nofollow" class="external text" href="https://bbs.archlinux.org/viewtopic.php?id=146850">written</a> a small and coloured RSS escaping script (<i>scrollable</i>):
+</p>
+<div style="height: 350px; overflow: auto; font-family: monospace; padding: 1em; border: 3px solid #bbccdd; background-color: black; color: #aaaaaa;">&#160;&#160; <span style="color: #ffffff; font-weight: bold;">::</span> <span style="color: #aa0000; font-weight: bold;">Arch Linux: Recent news updates</span> <span style="color: #ffffff; font-weight: bold;">::</span><br />&#160;<span style="color: #ffffff;">[</span> <span style="color: #55ccff; font-weight: bold;">https://www.archlinux.org/news/</span> <span style="color: #ffffff;">]</span><br /><br />The latest and greatest news from the Arch Linux distribution.<br /><br />&#160;<span style="color: #aa0000; font-weight: bold;">en-us Sun, 04 Nov 2012 16:09:46 +0000</span><br /><br /><br />&#160;&#160; <span style="color: #ffffff; font-weight: bold;">::</span> <span style="color: #aa0000; font-weight: bold;">End of initscripts support</span> <span style="color: #ffffff; font-weight: bold;">::</span><br />&#160;<span style="color: #ffffff;">[</span> <span style="color: #55ccff; font-weight: bold;">https://www.archlinux.org/news/end-of-initscripts-support/</span> <span style="color: #ffffff;">]</span><br /><br /><br />Tom Gundersen wrote:<br />As <span style="color: #ffffff;">systemd</span> is now the default init system, Arch Linux is receiving minimal testing on initscripts systems. Due to a lack of resources and interest, we are unlikely to work on fixing <span style="color: #ffffff;">initscripts</span>-specific bugs, and may close them as WONTFIX.<br />We therefore strongly encourage all users to migrate to <span style="color: #ffffff;">systemd</span> as soon as possible. See the <span style="color: #ffffff;">systemd</span> migration guide <span style="color: #5555ff;">[</span> <span style="text-decoration: underline;">https://wiki.archlinux.org/index.php/Systemd</span> <span style="color: #5555ff;">]</span>.<br />To ease the transition, <span style="color: #ffffff;">initscripts</span> support will remain in the official repositories for the time being, unless otherwise stated. As of January 2013, we will start removing <span style="color: #ffffff;">initscripts</span> support (e.g., <span style="color: #ffffff;">rc</span> scripts) from individual packages without further notice.<br /><br />&#160;<span style="color: #ffffff;">Tom Gundersen Sun, 04 Nov 2012 16:09:46 +0000 tag:www.archlinux.org,2012-11-04:/news/end-of-initscripts-support/</span><br /><br /><br />&#160;&#160; <span style="color: #ffffff; font-weight: bold;">::</span> <span style="color: #aa0000; font-weight: bold;">November release of install media available</span> <span style="color: #ffffff; font-weight: bold;">::</span><br />&#160;<span style="color: #ffffff;">[</span> <span style="color: #55ccff; font-weight: bold;">https://www.archlinux.org/news/november-release-of-install-media-available/</span> <span style="color: #ffffff;">]</span><br /><br /><br />Pierre Schmitz wrote:<br />The latest snapshot of our install and rescue media can be found on our <span style="color: #aa0000; font-weight: bold;">Download</span> <span style="color: #5555ff;">[</span> <span style="text-decoration: underline;">https://www.archlinux.org/download/</span> <span style="color: #5555ff;">]</span> page. The 2012.11.01 ISO image mainly contains minor bug fixes, cleanups and new packages compared to the previous one:<br />&#160;<span style="color: #5555ff;">*</span> First media with Linux 3.6<br />&#160;<span style="color: #5555ff;">*</span> <span style="background-color: #aa0000;">copytoram=n</span> can be used to not copy the image to RAM on network boot. This is probably unreliable but an option for systems with very low memory.<br />&#160;<span style="color: #5555ff;">*</span> <span style="background-color: #aa0000;">cowfile_size</span> boot parameter mainly for persistent COW on VFAT. See the <span style="color: #aa0000; font-weight: bold;">README</span> <span style="color: #5555ff;">[</span> <span style="text-decoration: underline;">https://projects.archlinux.org/archiso.git/plain/docs/README.bootparams?id=v4</span> <span style="color: #5555ff;">]</span> file for details.<br /><br />&#160;<span style="color: #ffffff;">Pierre Schmitz Fri, 02 Nov 2012 17:54:15 +0000 tag:www.archlinux.org,2012-11-02:/news/november-release-of-install-media-available/</span><br /><br /><br />&#160;&#160; <span style="color: #ffffff; font-weight: bold;">::</span> <span style="color: #aa0000; font-weight: bold;">Bug Squashing Day: Saturday 17th November</span> <span style="color: #ffffff; font-weight: bold;">::</span><br />&#160;<span style="color: #ffffff;">[</span> <span style="color: #55ccff; font-weight: bold;">https://www.archlinux.org/news/bug-squashing-day-saturday-17th-november/</span> <span style="color: #ffffff;">]</span><br /><br /><br />Allan McRae wrote:<br />The number of bugs in the Arch Linux bug tracker is creeping up so it is time for some extermination.<br />This is a great way for the community to get involved and help the Arch Linux team. The process is simple. First look at a bug for your favorite piece of software in the bug tracker and check if it still occurs. If it does, check the upstream project for a fix and test it to confirm it works. If there is no fix available, make sure the bug has been filed in the upstream tracker.<br />Join us on the #archlinux-bugs IRC channel. We are spread across timezones, so people should be around all day.<br /><br />&#160;<span style="color: #ffffff;">Allan McRae Thu, 01 Nov 2012 12:28:51 +0000 tag:www.archlinux.org,2012-11-01:/news/bug-squashing-day-saturday-17th-november/</span><br /><br /><br />&#160;&#160; <span style="color: #ffffff; font-weight: bold;">::</span> <span style="color: #aa0000; font-weight: bold;">ConsoleKit replaced by logind</span> <span style="color: #ffffff; font-weight: bold;">::</span><br />&#160;<span style="color: #ffffff;">[</span> <span style="color: #55ccff; font-weight: bold;">https://www.archlinux.org/news/consolekit-replaced-by-logind/</span> <span style="color: #ffffff;">]</span><br /><br /><br />Allan McRae wrote:<br />With GNOME 3.6, polkit and networkmanager moving to [extra], ConsoleKit has now been removed from the repositories. Any package that previously depended on it now relies on systemd-logind instead. That means that the system must be booted with systemd to be fully functional.<br />In addition to GNOME, both KDE and XFCE are also affected by this change.<br /><br />&#160;<span style="color: #ffffff;">Allan McRae Tue, 30 Oct 2012 22:17:39 +0000 tag:www.archlinux.org,2012-10-30:/news/consolekit-replaced-by-logind/</span><br /><br /><br />&#160;&#160; <span style="color: #ffffff; font-weight: bold;">::</span> <span style="color: #aa0000; font-weight: bold;">systemd is now the default on new installations</span> <span style="color: #ffffff; font-weight: bold;">::</span><br />&#160;<span style="color: #ffffff;">[</span> <span style="color: #55ccff; font-weight: bold;">https://www.archlinux.org/news/systemd-is-now-the-default-on-new-installations/</span> <span style="color: #ffffff;">]</span><br /><br /><br />Thomas B&#228;chler wrote:<br />The base group now contains the <span style="color: #ffffff;">systemd-sysvcompat</span> package. This means that all new installations will boot with systemd by default.<br />As some packages still lack native systemd units, users can install the <span style="color: #ffffff;">initscripts</span> package and use the <span style="color: #ffffff;">DAEMONS</span> array in <span style="color: #ffffff;">/etc/rc.conf</span> to start services using the legacy rc.d scripts.<br />This change does not affect existing installations. For the time being, the <span style="color: #ffffff;">initscripts</span> and <span style="color: #ffffff;">sysvinit</span> packages remain available from our repositories. However, individual packages may now start relying on the system being booted with systemd.<br />Please refer to <span style="color: #aa0000; font-weight: bold;">the wiki</span> <span style="color: #5555ff;">[</span> <span style="text-decoration: underline;">https://wiki.archlinux.org/index.php/Systemd</span> <span style="color: #5555ff;">]</span> for how to transition an existing installation to systemd.<br /><br />&#160;<span style="color: #ffffff;">Thomas B&#228;chler Sat, 13 Oct 2012 09:29:38 +0000 tag:www.archlinux.org,2012-10-13:/news/systemd-is-now-the-default-on-new-installations/</span><br /><br /><br />&#160;&#160; <span style="color: #ffffff; font-weight: bold;">::</span> <span style="color: #aa0000; font-weight: bold;">Install medium 2012.10.06 introduces systemd</span> <span style="color: #ffffff; font-weight: bold;">::</span><br />&#160;<span style="color: #ffffff;">[</span> <span style="color: #55ccff; font-weight: bold;">https://www.archlinux.org/news/install-medium-20121006-introduces-systemd/</span> <span style="color: #ffffff;">]</span><br /><br /><br />Pierre Schmitz wrote:<br />The October release of the Arch Linux install medium is available for <span style="color: #aa0000; font-weight: bold;">Download</span> <span style="color: #5555ff;">[</span> <span style="text-decoration: underline;">https://www.archlinux.org/download/</span> <span style="color: #5555ff;">]</span> and can be used for new installs or as a rescue system. It contains a set of updated packages and the following notable changes:<br />&#160;<span style="color: #5555ff;">*</span> systemd is used to boot up the live system.<br />&#160;<span style="color: #5555ff;">*</span> initscripts are no longer available on the live system but are still installed by default on the target system. This is likely to change in the near future.<br />&#160;<span style="color: #5555ff;">*</span> EFI boot and setup has been simplified.<br />&#160;<span style="color: #5555ff;">*</span> gummiboot is used to display a menu on EFI systems.<br />&#160;<span style="color: #5555ff;">*</span> The following new packages are available on the live system: ethtool, fsarchiver, gummiboot-efi, mc, partclone, partimage, refind-efi, rfkill, sudo, testdisk, wget, xl2tpd<br /><br />&#160;<span style="color: #ffffff;">Pierre Schmitz Sun, 07 Oct 2012 16:58:03 +0000 tag:www.archlinux.org,2012-10-07:/news/install-medium-20121006-introduces-systemd/</span><br /><br /><br />&#160;&#160; <span style="color: #ffffff; font-weight: bold;">::</span> <span style="color: #aa0000; font-weight: bold;">New install medium 2012.09.07</span> <span style="color: #ffffff; font-weight: bold;">::</span><br />&#160;<span style="color: #ffffff;">[</span> <span style="color: #55ccff; font-weight: bold;">https://www.archlinux.org/news/new-install-medium-20120907/</span> <span style="color: #ffffff;">]</span><br /><br /><br />Pierre Schmitz wrote:<br />As is customary by now there is a new install medium available at the beginning of this month. The live system can be downloaded from <span style="color: #aa0000; font-weight: bold;">Download</span> <span style="color: #5555ff;">[</span> <span style="text-decoration: underline;">https://www.archlinux.org/download/</span> <span style="color: #5555ff;">]</span> and be used for new installs or as a rescue system.<br />In addition to a couple of updated packages and bug fixes the following changes stand out:<br />&#160;<span style="color: #5555ff;">*</span> First medium with Linux 3.5 (3.5.3)<br />&#160;<span style="color: #5555ff;">*</span> The <span style="background-color: #aa0000;">script</span> boot parameter works again (<span style="color: #aa0000; font-weight: bold;">FS#31022</span> <span style="color: #5555ff;">[</span> <span style="text-decoration: underline;">https://bugs.archlinux.org/task/31022</span> <span style="color: #5555ff;">]</span>)<br />&#160;<span style="color: #5555ff;">*</span> When booting via PXE and NFS or NBD the ISO will be copied to RAM to ensure a more stable usage.<br />&#160;<span style="color: #5555ff;">*</span> The live medium contains <span style="background-color: #aa0000;">usb_modeswitch</span> and <span style="background-color: #aa0000;">wvdial</span> which e.g. allows to establish a network connection using an UMTS USB dongle<br />&#160;<span style="color: #5555ff;">*</span> Furthermore the newest versions of <span style="background-color: #aa0000;">initscripts</span>, <span style="background-color: #aa0000;">systemd</span> and <span style="background-color: #aa0000;">netcfg</span> are included.<br /><br />&#160;<span style="color: #ffffff;">Pierre Schmitz Sat, 08 Sep 2012 09:48:52 +0000 tag:www.archlinux.org,2012-09-08:/news/new-install-medium-20120907/</span><br /><br /><br />&#160;&#160; <span style="color: #ffffff; font-weight: bold;">::</span> <span style="color: #aa0000; font-weight: bold;">Fontconfig 2.10.1 update - manual intervention required</span> <span style="color: #ffffff; font-weight: bold;">::</span><br />&#160;<span style="color: #ffffff;">[</span> <span style="color: #55ccff; font-weight: bold;">https://www.archlinux.org/news/fontconfig-2101-update-manual-intervention-required/</span> <span style="color: #ffffff;">]</span><br /><br /><br />Andreas Radke wrote:<br />The fontconfig 2.10.1 update overwrites symlinks created by the former package version. These symlinks need to be removed before the update:<br /><br /><span style="color: #ffffff;">rm /etc/fonts/conf.d/20-unhint-small-vera.conf</span><br /><span style="color: #ffffff;">rm /etc/fonts/conf.d/20-fix-globaladvance.conf</span><br /><span style="color: #ffffff;">rm /etc/fonts/conf.d/29-replace-bitmap-fonts.conf</span><br /><span style="color: #ffffff;">rm /etc/fonts/conf.d/30-metric-aliases.conf</span><br /><span style="color: #ffffff;">rm /etc/fonts/conf.d/30-urw-aliases.conf</span><br /><span style="color: #ffffff;">rm /etc/fonts/conf.d/40-nonlatin.conf</span><br /><span style="color: #ffffff;">rm /etc/fonts/conf.d/45-latin.conf</span><br /><span style="color: #ffffff;">rm /etc/fonts/conf.d/49-sansserif.conf</span><br /><span style="color: #ffffff;">rm /etc/fonts/conf.d/50-user.conf</span><br /><span style="color: #ffffff;">rm /etc/fonts/conf.d/51-local.conf</span><br /><span style="color: #ffffff;">rm /etc/fonts/conf.d/60-latin.conf</span><br /><span style="color: #ffffff;">rm /etc/fonts/conf.d/65-fonts-persian.conf</span><br /><span style="color: #ffffff;">rm /etc/fonts/conf.d/65-nonlatin.conf</span><br /><span style="color: #ffffff;">rm /etc/fonts/conf.d/69-unifont.conf</span><br /><span style="color: #ffffff;">rm /etc/fonts/conf.d/80-delicious.conf</span><br /><span style="color: #ffffff;">rm /etc/fonts/conf.d/90-synthetic.conf</span><br /><span style="color: #ffffff;">pacman -Syu fontconfig</span><br /><br />Main systemwide configuration should be done by symlinks (especially for autohinting, sub-pixel and lcdfilter):<br /><br /><span style="color: #ffffff;">cd /etc/fonts/conf.d</span><br /><span style="color: #ffffff;">ln -s ../conf.avail/XX-foo.conf</span><br /><br />Also check <span style="color: #aa0000; font-weight: bold;">Font Configuration</span> <span style="color: #5555ff;">[</span> <span style="text-decoration: underline;">https://wiki.archlinux.org/index.php/Font_Configuration</span> <span style="color: #5555ff;">]</span> and <span style="color: #aa0000; font-weight: bold;">Fonts</span> <span style="color: #5555ff;">[</span> <span style="text-decoration: underline;">https://wiki.archlinux.org/index.php/Fonts</span> <span style="color: #5555ff;">]</span>.<br /><br />&#160;<span style="color: #ffffff;">Andreas Radke Thu, 06 Sep 2012 13:54:23 +0000 tag:www.archlinux.org,2012-09-06:/news/fontconfig-2101-update-manual-intervention-required/</span><br /><br /><br />&#160;&#160; <span style="color: #ffffff; font-weight: bold;">::</span> <span style="color: #aa0000; font-weight: bold;">netcfg-2.8.9 drops deprecated rc.conf compatibility</span> <span style="color: #ffffff; font-weight: bold;">::</span><br />&#160;<span style="color: #ffffff;">[</span> <span style="color: #55ccff; font-weight: bold;">https://www.archlinux.org/news/netcfg-289-drops-initscripts-compatibility/</span> <span style="color: #ffffff;">]</span><br /><br /><br />Florian Pritz wrote:<br />Users of <span style="color: #ffffff;">netcfg</span> should configure all interfaces in <span style="color: #ffffff;">/etc/conf.d/netcfg</span> rather than <span style="color: #ffffff;">/etc/rc.conf</span>.<br /><br />&#160;Florian Pritz Sat, 11 Aug 2012 20:00:02 +0000 tag:www.archlinux.org,2012-08-11:/news/netcfg-289-drops-initscripts-compatibility/<br /><br /><br />&#160;&#160; <span style="color: #ffffff; font-weight: bold;">::</span> <span style="color: #aa0000; font-weight: bold;">Install media 2012.08.04 available</span> <span style="color: #ffffff; font-weight: bold;">::</span><br />&#160;<span style="color: #ffffff;">[</span> <span style="color: #55ccff; font-weight: bold;">https://www.archlinux.org/news/install-media-20120804-available/</span> <span style="color: #ffffff;">]</span><br /><br /><br />Pierre Schmitz wrote:<br />The August snapshot of our live and install media comes with updated packages and the following changes on top of the <span style="color: #aa0000; font-weight: bold;">previous ISO image</span> <span style="color: #5555ff;">[</span> <span style="text-decoration: underline;">/news/install-media-20120715-released/</span> <span style="color: #5555ff;">]</span>:<br />&#160;<span style="color: #5555ff;">*</span> GRUB 2.0 instead of the legacy 0.9 version is available.<br />&#160;<span style="color: #5555ff;">*</span> The <span style="color: #aa0000; font-weight: bold;">Installation Guide</span> <span style="color: #5555ff;">[</span> <span style="text-decoration: underline;">https://wiki.archlinux.org/index.php/Installation_Guide</span> <span style="color: #5555ff;">]</span> can be found at <span style="background-color: #aa0000;">/root/install.txt</span>.<br />&#160;<span style="color: #5555ff;">*</span> ZSH with <span style="color: #aa0000; font-weight: bold;">Grml's configuration</span> <span style="color: #5555ff;">[</span> <span style="text-decoration: underline;">http://grml.org/zsh/</span> <span style="color: #5555ff;">]</span> is used as interactive shell to provide a user friendly and more convenient environment. This includes completion support for pacstrap, arch-chroot, pacman and most other tools.<br />&#160;<span style="color: #5555ff;">*</span> The network daemon is started by default which will automatically setup your network if DHCP is available.<br />Note that all these changes only affect the live system and not the base system you install using pacstrap. The ISO image can be downloaded from our <span style="color: #aa0000; font-weight: bold;">download page</span> <span style="color: #5555ff;">[</span> <span style="text-decoration: underline;">/download/</span> <span style="color: #5555ff;">]</span>. The next snapshot is scheduled for September.<br /><br />&#160;<span style="color: #ffffff;">Pierre Schmitz Sat, 04 Aug 2012 17:24:30 +0000 tag:www.archlinux.org,2012-08-04:/news/install-media-20120804-available/</span><br /><br /><br /><span style="color: #0a0; font-weight: bold;">andy@alba</span> <span style="text-decoration: blink;">_</span></div>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.bashrc</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">
+# Arch latest news
+if [ &quot;$PS1&quot; ] &amp;&amp; [[ $(ping -c1 www.google.com 2&gt;&amp;-) ]]; then
+	# The characters &quot;&#163;, &#167;&quot; are used as metacharacters. They should not be encountered in a feed...
+	echo -e &quot;$(echo $(curl --silent https://www.archlinux.org/feeds/news/ | sed -e ':a;N;$!ba;s/\n/ /g') | \
+		sed -e 's/&amp;amp;/\&amp;/g
+		s/&amp;lt;\|&amp;#60;/&lt;/g
+		s/&amp;gt;\|&amp;#62;/&gt;/g
+		s/&lt;\/a&gt;/&#163;/g
+		s/href\=\&quot;/&#167;/g
+		s/&lt;title&gt;/\\n\\n\\n   :: \\e[01;31m/g; s/&lt;\/title&gt;/\\e[00m ::\\n/g
+		s/&lt;link&gt;/ [ \\e[01;36m/g; s/&lt;\/link&gt;/\\e[00m ]/g
+		s/&lt;description&gt;/\\n\\n\\e[00;37m/g; s/&lt;\/description&gt;/\\e[00m\\n\\n/g
+		s/&lt;p\( [^&gt;]*\)\?&gt;\|&lt;br\s*\/\?&gt;/\n/g
+		s/&lt;b\( [^&gt;]*\)\?&gt;\|&lt;strong\( [^&gt;]*\)\?&gt;/\\e[01;30m/g; s/&lt;\/b&gt;\|&lt;\/strong&gt;/\\e[00;37m/g
+		s/&lt;i\( [^&gt;]*\)\?&gt;\|&lt;em\( [^&gt;]*\)\?&gt;/\\e[41;37m/g; s/&lt;\/i&gt;\|&lt;\/em&gt;/\\e[00;37m/g
+		s/&lt;u\( [^&gt;]*\)\?&gt;/\\e[4;37m/g; s/&lt;\/u&gt;/\\e[00;37m/g
+		s/&lt;code\( [^&gt;]*\)\?&gt;/\\e[00m/g; s/&lt;\/code&gt;/\\e[00;37m/g
+		s/&lt;a[^&#167;|t]*&#167;\([^\&quot;]*\)\&quot;[^&gt;]*&gt;\([^&#163;]*\)[^&#163;]*&#163;/\\e[01;31m\2\\e[00;37m \\e[01;34m[\\e[00;37m \\e[04m\1\\e[00;37m\\e[01;34m ]\\e[00;37m/g
+		s/&lt;li\( [^&gt;]*\)\?&gt;/\n \\e[01;34m*\\e[00;37m /g
+		s/&lt;!\[CDATA\[\|\]\]&gt;//g
+		s/\|&gt;\s*&lt;//g
+		s/ *&lt;[^&gt;]\+&gt; */ /g
+		s/[&lt;&gt;&#163;&#167;]//g')\n\n&quot;;
+fi</pre>
+<p>To only get the absolute latest item, use this:
+</p>
+<pre># Arch latest news
+if [ &quot;$PS1&quot; ] &amp;&amp; [[ $(ping -c1 www.google.com 2&gt;&amp;-) ]]; then
+	# The characters &quot;&#163;, &#167;&quot; are used as metacharacters. They should not be encountered in a feed...
+	echo -e &quot;$(echo $(curl --silent https://www.archlinux.org/feeds/news/ | awk ' NR == 1 {while ($0 !~ /&lt;\/item&gt;/) {print;getline} sub(/&lt;\/item&gt;.*/,&quot;&lt;/item&gt;&quot;) ;print}' | sed -e ':a;N;$!ba;s/\n/ /g') | \
+		sed -e 's/&amp;amp;/\&amp;/g
+		s/&amp;lt;\|&amp;#60;/&lt;/g
+		s/&amp;gt;\|&amp;#62;/&gt;/g
+		s/&lt;\/a&gt;/&#163;/g
+		s/href\=\&quot;/&#167;/g
+		s/&lt;title&gt;/\\n\\n\\n   :: \\e[01;31m/g; s/&lt;\/title&gt;/\\e[00m ::\\n/g
+		s/&lt;link&gt;/ [ \\e[01;36m/g; s/&lt;\/link&gt;/\\e[00m ]/g
+		s/&lt;description&gt;/\\n\\n\\e[00;37m/g; s/&lt;\/description&gt;/\\e[00m\\n\\n/g
+		s/&lt;p\( [^&gt;]*\)\?&gt;\|&lt;br\s*\/\?&gt;/\n/g
+		s/&lt;b\( [^&gt;]*\)\?&gt;\|&lt;strong\( [^&gt;]*\)\?&gt;/\\e[01;30m/g; s/&lt;\/b&gt;\|&lt;\/strong&gt;/\\e[00;37m/g
+		s/&lt;i\( [^&gt;]*\)\?&gt;\|&lt;em\( [^&gt;]*\)\?&gt;/\\e[41;37m/g; s/&lt;\/i&gt;\|&lt;\/em&gt;/\\e[00;37m/g
+		s/&lt;u\( [^&gt;]*\)\?&gt;/\\e[4;37m/g; s/&lt;\/u&gt;/\\e[00;37m/g
+		s/&lt;code\( [^&gt;]*\)\?&gt;/\\e[00m/g; s/&lt;\/code&gt;/\\e[00;37m/g
+		s/&lt;a[^&#167;|t]*&#167;\([^\&quot;]*\)\&quot;[^&gt;]*&gt;\([^&#163;]*\)[^&#163;]*&#163;/\\e[01;31m\2\\e[00;37m \\e[01;34m[\\e[00;37m \\e[04m\1\\e[00;37m\\e[01;34m ]\\e[00;37m/g
+		s/&lt;li\( [^&gt;]*\)\?&gt;/\n \\e[01;34m*\\e[00;37m /g
+		s/&lt;!\[CDATA\[\|\]\]&gt;//g
+		s/\|&gt;\s*&lt;//g
+		s/ *&lt;[^&gt;]\+&gt; */ /g
+		s/[&lt;&gt;&#163;&#167;]//g')\n\n&quot;;
+fi</pre>
+<h3><span class="mw-headline" id="Colors_overview">Colors overview</span></h3>
+<p>The page at <a rel="nofollow" class="external free" href="http://ascii-table.com/ansi-escape-sequences.php">http://ascii-table.com/ansi-escape-sequences.php</a> describes the various available color escapes. The following Bash function displays a table with ready-to-copy escape codes.
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.bashrc</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">
+colors() {
+	local fgc bgc vals seq0
+
+	printf &quot;Color escapes are %s\n&quot; '\e[${value};...;${value}m'
+	printf &quot;Values 30..37 are \e[33mforeground colors\e[m\n&quot;
+	printf &quot;Values 40..47 are \e[43mbackground colors\e[m\n&quot;
+	printf &quot;Value  1 gives a  \e[1mbold-faced look\e[m\n\n&quot;
+
+	# foreground colors
+	for fgc in {30..37}; do
+		# background colors
+		for bgc in {40..47}; do
+			fgc=${fgc#37} # white
+			bgc=${bgc#40} # black
+
+			vals=&quot;${fgc:+$fgc;}${bgc}&quot;
+			vals=${vals%%;}
+
+			seq0=&quot;${vals:+\e[${vals}m}&quot;
+			printf &quot;  %-9s&quot; &quot;${seq0:-(default)}&quot;
+			printf &quot; ${seq0}TEXT\e[m&quot;
+			printf &quot; \e[${vals:+${vals+$vals;}}1mBOLD\e[m&quot;
+		done
+		echo; echo
+	done
+}
+</pre>
+<h3><span class="mw-headline" id="Colorized_git_prompt">Colorized git prompt</span></h3>
+<p>Source <code>/usr/share/git/completion/git-prompt.sh</code> for your shell:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.bashrc</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">
+source /usr/share/git/completion/git-prompt.sh
+</pre>
+<p>and use <code>__git_ps1</code> inside <code>PS1</code> or <code>PROMPT_COMMAND</code>. See <a rel="nofollow" class="external text" href="http://ithaca.arpinum.org/2013/01/02/git-prompt.html">Don't Reinvent the Wheel</a> for details.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li> Community examples and screenshots in the Forum thread: <a rel="nofollow" class="external text" href="https://bbs.archlinux.org/viewtopic.php?id=50885">What's your PS1?</a></li>
+<li> The original <i>not modified</i> Gentoo's <code>/etc/bash.bashrc</code> file can be found <a rel="nofollow" class="external text" href="http://www.jeremysands.com/archlinux/gentoo-bashrc-2008.0">here</a><sup>[<a href="http://en.wikipedia.org/wiki/Wikipedia:Link_rot" class="extiw" title="wikipedia:Wikipedia:Link rot">dead link</a> 2014-08-05]</sup>. See also the <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/gentoo-bashrc/">gentoo-bashrc</a></span> package from <a href="/index.php/AUR" title="AUR" class="mw-redirect">AUR</a>.</li>
+<li> tput(1)
+<ul><li> <a rel="nofollow" class="external text" href="http://wiki.bash-hackers.org/scripting/terminalcodes">tput reference on bash-hackers.org</a></li>
+<li> <a rel="nofollow" class="external text" href="http://tldp.org/HOWTO/Bash-Prompt-HOWTO/x405.html">Colours and Cursor Movement With tput</a></li></ul></li>
+<li> <a rel="nofollow" class="external text" href="http://xcolors.net/">Nice Xresources color schemes collection</a></li>
+<li> <a rel="nofollow" class="external text" href="http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html">Bash Prompt HOWTO</a></li>
+<li> <a rel="nofollow" class="external text" href="http://gilesorr.com/bashprompt/prompts/index.html">Giles Orr's collection of sample prompts</a></li>
+<li> <a rel="nofollow" class="external text" href="http://misc.flogisoft.com/bash/tip_colors_and_formatting">Bash tips: Colors and formatting</a></li></ul>
+
+<!-- 
+NewPP limit report
+CPU time usage: 0.093 seconds
+Real time usage: 0.099 seconds
+Preprocessor visited node count: 1371/1000000
+Preprocessor generated node count: 3529/1000000
+Post‐expand include size: 8690/2097152 bytes
+Template argument size: 5165/2097152 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key archwiki:pcache:idhash:1076-0!*!0!!en!5!* and timestamp 20150517042030 and revision id 372842
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://wiki.archlinux.org/index.php?title=Color_Bash_Prompt&amp;oldid=372842">https://wiki.archlinux.org/index.php?title=Color_Bash_Prompt&amp;oldid=372842</a>"</div>
+					<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/index.php/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/index.php/Category:Eye_candy" title="Category:Eye candy">Eye candy</a></li><li><a href="/index.php/Category:Command_shells" title="Category:Command shells">Command shells</a></li></ul></div></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			<h2>Navigation menu</h2>
+					<div id="p-cactions" class="portlet" role="navigation">
+			<h3>Views</h3>
+
+			<div class="pBody">
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="/index.php/Color_Bash_Prompt" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk"><a href="/index.php/Talk:Color_Bash_Prompt" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="/index.php?title=Color_Bash_Prompt&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="/index.php?title=Color_Bash_Prompt&amp;action=history" rel="archives" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+				<div class="portlet" id="p-personal" role="navigation">
+				<h3>Personal tools</h3>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-createaccount"><a href="/index.php?title=Special:UserLogin&amp;returnto=Color+Bash+Prompt&amp;type=signup">Create account</a></li>
+													<li id="pt-login"><a href="/index.php?title=Special:UserLogin&amp;returnto=Color+Bash+Prompt" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="/index.php/Main_page" style="background-image: url(/skins/archlinux/archlogo.png);" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+							<ul>
+											<li id="n-mainpage-description"><a href="/index.php/Main_page" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-categories"><a href="/index.php/Table_of_contents">Categories</a></li>
+											<li id="n-portal"><a href="/index.php/Getting_involved" title="Various ways Archers can contribute to the community">Getting involved</a></li>
+											<li id="n-currentevents"><a href="/index.php/ArchWiki:News" title="The latest lowdown on the wiki">Wiki news</a></li>
+											<li id="n-randompage"><a href="/index.php/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h3><label for="searchInput">Search</label></h3>
+
+			<div id="searchBody" class="pBody">
+				<form action="/index.php" id="searchform">
+					<input type='hidden' name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search" title="Search ArchWiki [f]" accesskey="f" id="searchInput" />
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchGoButton" class="searchButton" />&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton" />
+				</form>
+
+							</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-interaction" role="navigation">
+		<h3>interaction</h3>
+		<div class='pBody'>
+							<ul>
+											<li id="n-help"><a href="/index.php/Category:Help" title="Wiki navigation, reading, and editing help">Help</a></li>
+											<li id="n-Contributing"><a href="/index.php/ArchWiki:Contributing">Contributing</a></li>
+											<li id="n-recentchanges"><a href="/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-Recent-talks"><a href="https://wiki.archlinux.org/index.php/Special:RecentChanges?namespace=0&amp;invert=1" rel="nofollow">Recent talks</a></li>
+											<li id="n-newpages"><a href="/index.php/Special:NewPages">New pages</a></li>
+											<li id="n-Statistics"><a href="/index.php/ArchWiki:Statistics">Statistics</a></li>
+											<li id="n-Reports"><a href="/index.php/ArchWiki:Reports">Reports</a></li>
+											<li id="n-Requests"><a href="/index.php/ArchWiki:Requests">Requests</a></li>
+									</ul>
+					</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h3>Tools</h3>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="/index.php/Special:WhatLinksHere/Color_Bash_Prompt" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="/index.php/Special:RecentChangesLinked/Color_Bash_Prompt" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="/index.php/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-print"><a href="/index.php?title=Color_Bash_Prompt&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="/index.php?title=Color_Bash_Prompt&amp;oldid=372842" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="/index.php?title=Color_Bash_Prompt&amp;action=info">Page information</a></li>
+									</ul>
+							</div>
+		</div>
+				<div id="p-lang" class="portlet" role="navigation">
+				<h3>In other languages</h3>
+
+				<div class="pBody">
+					<ul>
+													<li class="interlanguage-link interwiki-de"><a href="https://wiki.archlinux.de/title/Bash-Prompt_anpassen" title="Bash-Prompt anpassen – Deutsch" lang="de" hreflang="de">Deutsch</a></li>
+													<li class="interlanguage-link interwiki-es"><a href="https://wiki.archlinux.org/index.php/Color_Bash_Prompt_(Espa%C3%B1ol)" title="Color Bash Prompt – español" lang="es" hreflang="es">Español</a></li>
+													<li class="interlanguage-link interwiki-it"><a href="https://wiki.archlinux.org/index.php/Color_Bash_Prompt_(Italiano)" title="Color Bash Prompt – italiano" lang="it" hreflang="it">Italiano</a></li>
+													<li class="interlanguage-link interwiki-ja"><a href="https://archlinuxjp.kusakata.com/wiki/Bash_%E3%82%AB%E3%83%A9%E3%83%BC%E3%83%97%E3%83%AD%E3%83%B3%E3%83%97%E3%83%88" title="Bash カラープロンプト – 日本語" lang="ja" hreflang="ja">日本語</a></li>
+													<li class="interlanguage-link interwiki-ru"><a href="https://wiki.archlinux.org/index.php/Color_Bash_Prompt_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)" title="Color Bash Prompt – русский" lang="ru" hreflang="ru">Русский</a></li>
+													<li class="interlanguage-link interwiki-zh-cn"><a href="https://wiki.archlinux.org/index.php/Color_Bash_Prompt_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)" title="Color Bash Prompt – 中文（中国大陆）‎" lang="zh-CN" hreflang="zh-CN">中文（中国大陆）‎</a></li>
+											</ul>
+
+									</div>
+			</div>
+				</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<ul id="f-list">
+									<li id="lastmod"> This page was last modified on 7 May 2015, at 07:40.</li>
+									<li id="copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3 or later</a> unless otherwise noted.</li>
+									<li id="privacy"><a href="/index.php/ArchWiki:Privacy_policy" title="ArchWiki:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="/index.php/ArchWiki:About" title="ArchWiki:About">About ArchWiki</a></li>
+									<li id="disclaimer"><a href="/index.php/ArchWiki:General_disclaimer" title="ArchWiki:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.toc","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest"],null,true);
+}</script>
+<script>if(window.mw){
+document.write("\u003Cscript src=\"https://wiki.archlinux.org/load.php?debug=false\u0026amp;lang=en\u0026amp;modules=site\u0026amp;only=scripts\u0026amp;skin=archlinux\u0026amp;*\"\u003E\u003C/script\u003E");
+}</script>
+<script>if(window.mw){
+mw.config.set({"wgBackendResponseTime":120});
+}</script></body><!-- Cached 20150517042030 -->
+</html>

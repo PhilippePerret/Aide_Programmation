@@ -10,7 +10,7 @@ STDERR.puts "monErreur"
 
 Appel du script
 ---------------
-`./err.rb 2>&amp;1`
+`./err.rb 2>&1`
 
 Retour
 ------
